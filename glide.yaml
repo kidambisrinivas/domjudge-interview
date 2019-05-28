@@ -1,0 +1,9 @@
+package: github.com/kidambisrinivas/domjudge-interview
+import:
+- package: github.com/jinzhu/gorm
+  version: ^1.9.8
+- package: github.com/go-sql-driver/mysql
+  version: ^1.4.1
+- package: golang.org/x/crypto
+  subpackages:
+  - bcrypt
