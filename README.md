@@ -10,6 +10,18 @@ This service supports the following operations:
 * `DELETE_CONTEST`: Delete contest and all teams and users associated with that contest
 * `SHOW_RESULTS`: Export leaderboard (Results) of a contest identified by contest-short-name to a TSV file 
 
+## Installation
+
+```bash
+gvm use go1.11 && export GOPATH=$HOME/gocode
+mkdir -p $GOPATH/src/github.com/kidambisrinivas && cd $GOPATH/src/github.com/kidambisrinivas
+git clone https://www.github.com/kidambisrinivas/domjudge-interview
+cd domjudge-interview
+glide install
+go install github.com/kidambisrinivas/domjudge-interview
+$GOPATH/bin/domjudge-interview --help
+```
+
 ## Service modes
 
 ### `CREATE_CONTEST`
