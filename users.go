@@ -345,8 +345,8 @@ func SendContestWelcomeEmail(user User, contestDetails Contest, config *Config) 
 	from := config.CliArgs.SendwithusFrom
 	fromName := config.CliArgs.SendwithusFromName
 	replyTo := config.CliArgs.SendwithusReplyTo
-	cc := ""  // comma separated email id's
-	bcc := "" // comma separated email id's
+	bcc := config.CliArgs.SendwithusCc // comma separated email id's
+	cc := ""                           // comma separated email id's
 	sendwithusApiKey := config.CliArgs.SendwithusApiKey
 	sendwithusTemplateId := config.CliArgs.SendwithusTemplateId
 	templateData := &ContestWelcomeEmail{

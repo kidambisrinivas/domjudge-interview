@@ -104,6 +104,7 @@ func ParseCliArgs() (cliArgs *CliArgs, err error) {
 	sendwithusReplyTo := flag.String("sendwithus-reply-to", "", "Sendwithus reply to value to send userid/password emails using sendwithus to all users (OPTIONAL for op ADD_USERS, but MANDATORY if sendwithusApiKey is mentioned)")
 	sendwithusFrom := flag.String("sendwithus-from", "", "Sendwithus from value to send userid/password emails using sendwithus to all users (OPTIONAL for op ADD_USERS, but MANDATORY if sendwithusApiKey is mentioned)")
 	sendwithusFromName := flag.String("sendwithus-from-name", "", "Sendwithus from-name value to send userid/password emails using sendwithus to all users (OPTIONAL for op ADD_USERS, but MANDATORY if sendwithusApiKey is mentioned)")
+	sendwithusFromCc := flag.String("sendwithus-cc", "", "Sendwithus cc value to send userid/password emails using sendwithus to all users (OPTIONAL for op ADD_USERS, but MANDATORY if sendwithusApiKey is mentioned)")
 	contestUrl := flag.String("contest-url", "", "Contest URL (MANDATORY for op's: ADD_USERS)")
 
 	flag.Parse()
@@ -128,6 +129,7 @@ func ParseCliArgs() (cliArgs *CliArgs, err error) {
 		SendwithusReplyTo:    getLastStr(cliArgs.SendwithusReplyTo, *sendwithusReplyTo),
 		SendwithusFrom:       getLastStr(cliArgs.SendwithusFrom, *sendwithusFrom),
 		SendwithusFromName:   getLastStr(cliArgs.SendwithusFromName, *sendwithusFromName),
+		SendwithusCc:         getLastStr(cliArgs.SendwithusCc, *sendwithusFromCc),
 		ContestUrl:           getLastStr(cliArgs.ContestUrl, *contestUrl),
 	}
 	err = ValidateConfig(cliArgs)

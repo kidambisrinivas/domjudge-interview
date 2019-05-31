@@ -17,6 +17,7 @@ type CliArgs struct {
 	SendwithusReplyTo    string `json:"sendwithus-reply-to"`
 	SendwithusFrom       string `json:"sendwithus-from"`
 	SendwithusFromName   string `json:"sendwithus-from-name"`
+	SendwithusCc         string `json:"sendwithus-cc"`
 	ContestUrl           string `json:"contest-url"`
 }
 
