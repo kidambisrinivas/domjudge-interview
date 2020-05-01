@@ -19,6 +19,7 @@ func BuildNewContest(name string, shortName string, durationHours int) (contest 
 
 	return Contest{
 		Name:           name,
+		ExternalId:     shortName,
 		ShortName:      shortName,
 		ActivateTime:   activateTime,
 		StartTime:      startTime,
